@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  form(action="/polls/create", method="post")
+    .form-group
+      label(for="poll") Poll Name
+      input.form-control(type="text" id="poll" name="poll" placeholder="Enter Poll Name Here")
+    h5 Options
+    .form-group
+      input.form-control(type="text" id="option1" name="option1" placeholder="Choice 1")
+      input.form-control(type="text" id="option2" name="option2" placeholder="Choice 2")
+    button.btn.btn-primary(type="submit") Submit
